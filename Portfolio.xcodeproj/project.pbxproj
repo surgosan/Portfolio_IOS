@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B7BC4B12C2E1FAC00A63760 /* Sergio Sanchez Alvares.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7B7BC4B02C2E1FAC00A63760 /* Sergio Sanchez Alvares.pdf */; };
 		7B8BEC072C26633F00C3FD52 /* PortfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BEC062C26633F00C3FD52 /* PortfolioApp.swift */; };
 		7B8BEC092C26633F00C3FD52 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BEC082C26633F00C3FD52 /* ContentView.swift */; };
 		7B8BEC0B2C26634000C3FD52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B8BEC0A2C26634000C3FD52 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B7BC4B02C2E1FAC00A63760 /* Sergio Sanchez Alvares.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Sergio Sanchez Alvares.pdf"; sourceTree = "<group>"; };
 		7B8BEC032C26633F00C3FD52 /* Portfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Portfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8BEC062C26633F00C3FD52 /* PortfolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioApp.swift; sourceTree = "<group>"; };
 		7B8BEC082C26633F00C3FD52 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 		7B8BEBFA2C26633F00C3FD52 = {
 			isa = PBXGroup;
 			children = (
+				7B7BC4B02C2E1FAC00A63760 /* Sergio Sanchez Alvares.pdf */,
 				7B8BEC052C26633F00C3FD52 /* Portfolio */,
 				7B8BEC162C26634000C3FD52 /* PortfolioTests */,
 				7B8BEC202C26634000C3FD52 /* PortfolioUITests */,
@@ -233,6 +236,7 @@
 			files = (
 				7B8BEC0E2C26634000C3FD52 /* Preview Assets.xcassets in Resources */,
 				7B8BEC0B2C26634000C3FD52 /* Assets.xcassets in Resources */,
+				7B7BC4B12C2E1FAC00A63760 /* Sergio Sanchez Alvares.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
