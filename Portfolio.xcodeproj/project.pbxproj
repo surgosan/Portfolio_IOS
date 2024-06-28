@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B0AF5EE2C2F206A00010148 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AF5ED2C2F206A00010148 /* Home.swift */; };
+		7B0AF5EF2C2F206A00010148 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AF5ED2C2F206A00010148 /* Home.swift */; };
+		7B0AF5F02C2F206A00010148 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AF5ED2C2F206A00010148 /* Home.swift */; };
+		7B0AF5F22C2F230F00010148 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AF5F12C2F230F00010148 /* About.swift */; };
+		7B0AF5F32C2F230F00010148 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AF5F12C2F230F00010148 /* About.swift */; };
+		7B0AF5F42C2F230F00010148 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AF5F12C2F230F00010148 /* About.swift */; };
+		7B0AF5F62C2F236B00010148 /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AF5F52C2F236B00010148 /* Projects.swift */; };
+		7B0AF5F72C2F236B00010148 /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AF5F52C2F236B00010148 /* Projects.swift */; };
+		7B0AF5F82C2F236B00010148 /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AF5F52C2F236B00010148 /* Projects.swift */; };
 		7B7BC4B12C2E1FAC00A63760 /* Sergio Sanchez Alvares.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7B7BC4B02C2E1FAC00A63760 /* Sergio Sanchez Alvares.pdf */; };
 		7B8BEC072C26633F00C3FD52 /* PortfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BEC062C26633F00C3FD52 /* PortfolioApp.swift */; };
 		7B8BEC092C26633F00C3FD52 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BEC082C26633F00C3FD52 /* ContentView.swift */; };
@@ -35,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B0AF5ED2C2F206A00010148 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		7B0AF5F12C2F230F00010148 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		7B0AF5F52C2F236B00010148 /* Projects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projects.swift; sourceTree = "<group>"; };
 		7B7BC4B02C2E1FAC00A63760 /* Sergio Sanchez Alvares.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Sergio Sanchez Alvares.pdf"; sourceTree = "<group>"; };
 		7B8BEC032C26633F00C3FD52 /* Portfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Portfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8BEC062C26633F00C3FD52 /* PortfolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioApp.swift; sourceTree = "<group>"; };
@@ -101,6 +113,9 @@
 				7B8BEC082C26633F00C3FD52 /* ContentView.swift */,
 				7B8BEC0A2C26634000C3FD52 /* Assets.xcassets */,
 				7B8BEC0C2C26634000C3FD52 /* Preview Content */,
+				7B0AF5ED2C2F206A00010148 /* Home.swift */,
+				7B0AF5F12C2F230F00010148 /* About.swift */,
+				7B0AF5F52C2F236B00010148 /* Projects.swift */,
 			);
 			path = Portfolio;
 			sourceTree = "<group>";
@@ -262,6 +277,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B8BEC092C26633F00C3FD52 /* ContentView.swift in Sources */,
+				7B0AF5F22C2F230F00010148 /* About.swift in Sources */,
+				7B0AF5F62C2F236B00010148 /* Projects.swift in Sources */,
+				7B0AF5EE2C2F206A00010148 /* Home.swift in Sources */,
 				7B8BEC072C26633F00C3FD52 /* PortfolioApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,7 +288,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B0AF5EF2C2F206A00010148 /* Home.swift in Sources */,
+				7B0AF5F32C2F230F00010148 /* About.swift in Sources */,
 				7B8BEC182C26634000C3FD52 /* PortfolioTests.swift in Sources */,
+				7B0AF5F72C2F236B00010148 /* Projects.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +300,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B8BEC222C26634000C3FD52 /* PortfolioUITests.swift in Sources */,
+				7B0AF5F42C2F230F00010148 /* About.swift in Sources */,
+				7B0AF5F82C2F236B00010148 /* Projects.swift in Sources */,
+				7B0AF5F02C2F206A00010148 /* Home.swift in Sources */,
 				7B8BEC242C26634000C3FD52 /* PortfolioUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
