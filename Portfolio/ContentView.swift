@@ -19,13 +19,13 @@ struct ContentView: View {
     }
     
     let languagePreviews = [
-            ("System.out.println(\"Hello World\");", "Java"),
-            ("printf(\"Hello, World!\");", "C"),
-            ("<h1> Hello World </h1>", "HTML"),
-            ("--text: \"Hello World\"", "CSS"),
-            ("console.log(\"Hello World\");", "JavaScript"),
-            ("print(\"Hello World\")", "Swift"),
-        ]
+        ("System.out.println(\"Hello World\");", "Java"),
+        ("printf(\"Hello, World!\");", "C"),
+        ("<h1> Hello World </h1>", "HTML"),
+        ("--text: \"Hello World\"", "CSS"),
+        ("console.log(\"Hello World\");", "JavaScript"),
+        ("print(\"Hello World\")", "Swift"),
+    ]
     
     
     struct VisitResponse: Codable {
@@ -100,13 +100,35 @@ struct ContentView: View {
         }
 
     // Function to present share sheet
-        func presentShareSheet(url: URL) {
-            let activityViewController = UIActivityViewController(activityItems: [url], applicationActivities: nil)
-            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-               let rootViewController = windowScene.windows.first?.rootViewController {
-                rootViewController.present(activityViewController, animated: true, completion: nil)
-            }
+    func presentShareSheet(url: URL) {
+        let activityViewController = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let rootViewController = windowScene.windows.first?.rootViewController {
+            rootViewController.present(activityViewController, animated: true, completion: nil)
         }
+    }
+    
+    // Structure (object) for socials
+    struct SocialLinkDetails: Hashable {
+        let urlString: String
+        let buttonText: String
+        let imageName: String
+        let backgroundColor: Color
+    }
+    
+    // Socials Collection
+    let socialsData: [SocialLinkDetails] = [
+            SocialLinkDetails(urlString: "https://github.com/surgosan", buttonText: "Visit my Github", imageName: "GitHub", backgroundColor: Color.black),
+            
+            SocialLinkDetails(urlString: "https://www.linkedin.com/in/sergio-sanchez-alvares-36a97614a/", buttonText: "Visit my LinkedIn", imageName: "LinkedIn", backgroundColor: Color.red),
+            
+            SocialLinkDetails(urlString: "https://sanchezalvarez.dev/", buttonText: "Visit this Site", imageName: "S", backgroundColor: Color.green),
+            
+            SocialLinkDetails(urlString: "https://www.facebook.com/profile.php?id=100007142827416", buttonText: "Friend me on Facebook", imageName: "Facebook", backgroundColor: Color.blue),
+            
+            SocialLinkDetails(urlString: "https://www.instagram.com/sergo.sanchez/", buttonText: "Follow my Insta", imageName: "Instagram", backgroundColor: Color.orange)
+                
+        ]
     
     
     //---------------------------------------------- MAIN APPLICATION ----------------------------------------------
@@ -258,11 +280,44 @@ struct ContentView: View {
                 }
                 .frame(height: 100)
                 .padding(.vertical, 10)
-            }
-            .padding() // Main VStack
+                
+                
+                // ------------------------ Social Links ------------------------
+                VStack {
+                    ForEach(socialsData, id: \.self) { SocialLinkDetails in
+                        Button(action: {
+                            if let url = URL(string: SocialLinkDetails.urlString) {
+                                UIApplication.shared.open(url)
+                            }
+                        }) {
+                            HStack {
+                                Text(SocialLinkDetails.buttonText)
+                                    .font(.title3)
+                                Spacer()
+                                Image(SocialLinkDetails.imageName)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 40, height: 40)
+                            }
+                            .padding(.horizontal)
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        .frame(maxWidth: .infinity, maxHeight: 75)
+                        .background(SocialLinkDetails.backgroundColor)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.white, lineWidth: 2)
+                        )
+                        
+                    }
+                }
+                .padding(.vertical, 10)
+            } // Main VStack
+            .padding()
         } // ZStack background
-    }
-}
+    } // Body
+} // Structure
 
 #Preview {
     ContentView()
