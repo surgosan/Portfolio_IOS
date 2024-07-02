@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// -------------------------------------------------- ABOUT DETAILS --------------------------------------------------
 struct aboutDetails: Hashable {
     let title: String
     let content: String
@@ -63,11 +64,34 @@ let aboutList: [aboutDetails] = [
         imageTwo: "exp2",
         background: Color.gray
     )
-    
 ]
+
+
+// -------------------------------------------------- TOOLS --------------------------------------------------
+struct tool: Hashable {
+    let svg: String
+    let tooltip: String
+}
+
+let programmingTools: [tool] = [
+    tool(svg: "HTML", tooltip: "HTML"),
+    tool(svg: "CSS", tooltip: "CSS"),
+    tool(svg: "JavaScript", tooltip: "JavaScript"),
+    tool(svg: "Java", tooltip: "Java"),
+    tool(svg: "Swift", tooltip: "Swift"),
+    tool(svg: "Markdown", tooltip: "Markdown"),
+    tool(svg: "VueJS", tooltip: "VueJS"),
+    tool(svg: "MySQL", tooltip: "MySQL"),
+    tool(svg: "VS Code", tooltip: "VS Code"),
+    tool(svg: "Git", tooltip: "Git"),
+    tool(svg: "GitHub", tooltip: "GitHub"),
+    tool(svg: "Bitbucket", tooltip: "Bitbucket")
+]
+
 
 struct About: View { // Struct
     @Environment(\.colorScheme) var colorScheme // Setting the users setting as an environment variable
+    let columns: [GridItem] = Array(repeating: .init(.flexible()), count: 4)
     
     var dynamicTheme: Color { // Checks if colorScheme == dark. If it is, return orange, else return blue
         colorScheme == .dark ?
@@ -119,6 +143,39 @@ struct About: View { // Struct
                 }
             }
             .padding()
+            
+            Text("Programming Tools")
+                .font(.title)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding()
+            
+
+            let numberOfRows = (programmingTools.count + columns.count - 1) / columns.count
+            ForEach(0..<numberOfRows, id: \.self) { row in
+                let start = row * columns.count
+                let end = min(start + columns.count, programmingTools.count)
+                let rowItems = programmingTools[start..<end]
+                HStack {
+                    Spacer()
+                    ForEach(rowItems, id: \.self) { tool in
+                        VStack {
+                            Image(tool.svg)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 50, height: 50)
+                                .padding(.bottom, 5)
+                            Text(tool.tooltip)
+                                .font(.caption)
+                                .frame(maxWidth: .infinity)
+                        }
+                        .frame(width: 90, height: 100)
+                        .background(Color.gray.opacity(0.2))
+                        .cornerRadius(8)
+                    }
+                    Spacer()
+                }
+                .padding(.bottom, 10)
+            }
         } // Main ScrollView
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     } // Body
