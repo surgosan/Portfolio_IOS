@@ -127,13 +127,7 @@ struct Home: View {
     
     //---------------------------------------------- MAIN APPLICATION ----------------------------------------------
     var body: some View {
-        ZStack { // Use Z Stack to set the background of the app
-            if colorScheme == .dark { // Check if colorSheme is dark or light and use appropriate
-                Color.black.edgesIgnoringSafeArea(.all)
-            } else {
-                Color.white.edgesIgnoringSafeArea(.all)
-            }
-            
+        ZStack { // Use Z Stack to set the background of the app            
             // ------------------------ Main Container ------------------------
             VStack(alignment: .center) {
                 // ------------------------ Image & Name ------------------------
