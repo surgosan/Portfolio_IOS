@@ -39,7 +39,7 @@ struct ContentView: View {
                 
                 Projects()
                     .tabItem {
-                        Image(systemName: "gearshape.fill")
+                        Image(systemName: "folder.fill")
                         Text("Projects")
                     }
             }
