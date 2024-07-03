@@ -218,7 +218,7 @@ struct Home: View {
                 }
                 .padding(.vertical, 2)
                 .onAppear{
-//                    getVisits()  // Call this function when ready to execute queries
+                getVisits()  // Call this function when ready to execute queries
                 }
                 
                 Divider().frame(height: 5)
