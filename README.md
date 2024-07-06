@@ -22,12 +22,4 @@ and see my application for themselves. Thus, I will display it here.
 Last time, I used a GIF file to display it since it would provide a smaller footprint. This
 time, I am using Git LFS to move large files such as the following MP4.
 
-
-<video width="405" height="720" controls>
-  <source src="https://raw.githubusercontent.com/surgosan/Portfolio_IOS/main/preview.MP4" type="video/mp4">
-</video>
-
-<video width="405" height="720" controls>
-  <source src="preview.MP4" type="video/mp4">
-</video>
-
+[preview.MP4](preview.MP4)
