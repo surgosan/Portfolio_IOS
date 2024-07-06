@@ -17,9 +17,9 @@ some live projects.
 ## Demonstration
 
 Just like my original IOS application, I do not expect for everyone to have an iMac to clone
-and see my application for themselves. Thus, I will display it here. 
+and see my application for themselves. Thus, I will have it displayed here as a high
+quality GIF I made using DaVinci Resolve
 
-Last time, I used a GIF file to display it since it would provide a smaller footprint. This
-time, I am using Git LFS to move large files such as the following MP4.
+![Preview][1]
 
-[preview.MP4](preview.MP4)
+[1]: preview.gif
